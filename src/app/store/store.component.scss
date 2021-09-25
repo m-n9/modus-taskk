@@ -1,0 +1,19 @@
+.nav-bar {
+  height: 80px;
+  border-bottom: 1px dashed lightgray;
+  .logo {
+    max-width: 70px;
+  }
+  nav {
+    float: right;
+      li {
+      display: inline-block;
+      padding: 0.75rem;
+      font-weight: bold
+      }
+      li:hover{
+        color: darkgray;
+        cursor: pointer;
+      }
+  }
+}

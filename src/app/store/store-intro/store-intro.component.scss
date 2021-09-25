@@ -1,0 +1,43 @@
+.product-list {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+// Fancy Button
+$blue: #064867;
+
+.btn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 0.6em;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: #000;
+    outline: 0;
+  }
+}
+.third {
+  border-color: $blue;
+  color: #fff;
+  box-shadow: 0 0 40px 40px $blue inset, 0 0 0 0 $blue;
+  transition: all 150ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue;
+  }
+}
+// Fancy Button End

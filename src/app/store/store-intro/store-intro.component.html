@@ -1,0 +1,8 @@
+<div class="product-list">
+  <div *ngFor="let product of productData.productsList | slice:0:5">
+    <product-card [product]="product"></product-card>
+  </div>
+</div>
+<div class="button-container">
+  <button class="btn third" routerLink="/products">See All Products</button>
+</div>
