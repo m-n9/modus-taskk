@@ -6,13 +6,18 @@ import { StoreMainComponent } from "./store-main/store-main.component";
 import { StoreIntroComponent } from "./store-intro/store-intro.component";
 import { StoreComponent } from "./store.component";
 import { ProductCardComponent } from "src/app/shared/product-card/product-card.component";
+import { NgxPaginationModule } from "ngx-pagination";
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductSearchPipe } from "../pipes/product-search.pipe";
+
 const routes: Routes = [
   {
     path: "",
     component: StoreComponent,
     children: [
       { path: "", component: StoreIntroComponent },
-      { path: "products", component: StoreMainComponent }
+      { path: "products", component: StoreMainComponent },
+      { path: "product/:id", component: ProductDetailComponent}
     ]
   }
 ];
@@ -21,8 +26,15 @@ const routes: Routes = [
     StoreComponent,
     StoreMainComponent,
     StoreIntroComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductDetailComponent,
+    ProductSearchPipe
   ],
-  imports: [CommonModule, FormsModule, RouterModule.forChild(routes)]
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule.forChild(routes),
+    NgxPaginationModule
+  ]
 })
 export class StoreModule {}

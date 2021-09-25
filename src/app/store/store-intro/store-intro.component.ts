@@ -8,7 +8,5 @@ import { Product } from "src/app/models/product";
 })
 export class StoreIntroComponent implements OnInit {
   constructor(public productData: ProductListDataService) {}
-  ngOnInit() {
-    this.productData.fetchProductsList();
-  }
+  ngOnInit() {}
 }

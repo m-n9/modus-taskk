@@ -1,5 +1,16 @@
+<form class="search-bar">
+  <label>Search</label>
+  <div class="search-container">
+    <input type="search" name="mc-search" [(ngModel)]="nameSearch" required>
+    <button class="search-btn" type="submit">
+      <span>Search</span>
+    </button>
+  </div>
+</form>
 <div class="product-list">
-  <div *ngFor="let product of productList">
+  <div
+    *ngFor="let product of productData.productsList | paginate: { itemsPerPage: 10, currentPage: currentPage } | productSearch: nameSearch">
     <product-card [product]="product"></product-card>
   </div>
 </div>
+<pagination-controls *ngIf="nameSearch == ''" (pageChange)="currentPage = $event"></pagination-controls>

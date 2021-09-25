@@ -8,10 +8,8 @@ import { ProductListDataService } from "src/app/services/products-list.service";
   styleUrls: ["./store-main.component.scss"]
 })
 export class StoreMainComponent implements OnInit {
-  productList: Product;
+  currentPage;
+  nameSearch: string = '';
   constructor(public productData: ProductListDataService) {}
-  ngOnInit() {
-    this.productList = this.productData.productsList;
-    console.log("ProductList", this.productList);
-  }
+  ngOnInit() {}
 }

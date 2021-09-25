@@ -1,12 +1,10 @@
-<div class="product-card">
+<div class="product-card" [routerLink]="['/product', product.id]">
   <div class="badge">{{product.tags[0]}}</div>
   <div class="product-tumb">
     <img [src]="product.images[0]" alt="" />
   </div>
   <div class="product-details">
-    <span class="product-catagory"
-      ><strong>Category:</strong> {{product.category}}</span
-    >
+    <span class="product-catagory"><strong>Category:</strong> {{product.category}}</span>
     <h4><a href="">{{product.title}}</a></h4>
     <p>
       {{product.description | slice:0:85}}
@@ -14,6 +12,7 @@
     </p>
     <div class="product-bottom-details">
       <div class="product-price">${{product.price}}</div>
+      <button class="button-base ripple">View Product</button>
     </div>
   </div>
 </div>

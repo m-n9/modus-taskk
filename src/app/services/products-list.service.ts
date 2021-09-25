@@ -16,9 +16,7 @@ export class ProductListDataService {
       (err) => {
         console.error(err);
       },
-      () => {
-        console.log("Product list is", this.productsList);
-      }
+      () => {}
     );
   }
 }
